@@ -1,0 +1,8 @@
+torch==2.0.0
+transformers
+huggingface_hub
+datasets
+scikit-learn
+ipykernel
+ipywidgets
+accelerate
