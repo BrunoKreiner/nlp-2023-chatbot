@@ -1,0 +1,104 @@
+{
+    "os": "Linux-6.2.6-76060206-generic-x86_64-with-glibc2.35",
+    "python": "3.10.11",
+    "heartbeatAt": "2023-06-18T14:57:08.494037",
+    "startedAt": "2023-06-18T14:57:07.880345",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/BrunoKreiner/nlp-2023-chatbot.git",
+        "commit": "58f743b48ff30cdef8aa1eb9507c93fcc0e09d6d"
+    },
+    "email": "brunokreiner@hotmail.ch",
+    "root": "/media/bruno/0d2f61d2-2b9c-4043-9a46-8e4dfe74fc95/bruno/Documents/nlp-2023-chatbot",
+    "host": "pop-os",
+    "username": "bruno",
+    "executable": "/media/bruno/0d2f61d2-2b9c-4043-9a46-8e4dfe74fc95/bruno/anaconda3/envs/nlp-mc2/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 4.4995,
+        "min": 800.0,
+        "max": 4800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4.499,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.5,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.5,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.5,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.499,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.499,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.5,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.499,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.5,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.499,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.499,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.5,
+            "min": 800.0,
+            "max": 4800.0
+        }
+    ],
+    "disk": {
+        "total": 95.56354141235352,
+        "used": 85.37842559814453
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 23.383453369140625
+    }
+}
