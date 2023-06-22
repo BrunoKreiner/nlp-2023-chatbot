@@ -1,6 +1,6 @@
 # Custom 
 models/
-data/**
+data/**.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
