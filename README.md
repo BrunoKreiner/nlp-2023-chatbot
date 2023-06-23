@@ -38,6 +38,15 @@ This dataset serves as the training, evaluation and testing data for the text co
 Since our task was to create a generative Q&A model, we only took the correct answers for the respective questions. So we reated a .txt file with the "Solution" followed by the paired "Goal". These goal and solution pairs are saved in the .txt file as new lines.
 
 ### Data (Pre-)Processing
+To make sense of the data, we first needed to extract and organize these pairs. The goals were identified by lines starting with "Goal:", while the corresponding solutions were marked with "Solution:". By parsing the file, we obtained tuples containing the goal and its associated solution, setting the stage for further processing.
+
+Tokenization played a key role in breaking down the text into manageable tokens. To accomplish this, we utilized the Autotokenizer tokenizer from the transformers library. By initializing the tokenizer with the "EleutherAI/pythia-1b" model, we were able to convert the text data into a sequence of tokens. Additionally, we introduced special tokens that denoted specific elements of the prompts, such as the end of the response key and instruction key. This ensured proper formatting during training.
+
+To create structured prompts for the language model, we employed a formatting template. This template consisted of an introduction blurb, an instruction key, a response key, and an end key. By inserting the goal and solution from each pair into this template, we obtained properly formatted prompts. This way we provided precice instructions to the model, so it could generatr responses that fulfilled the given goals.
+
+We needed to put our processed data into a dataset that the model could understand. So, we made a class called GoalSolutionDataset. It took in the tokenizer, file paths, maximum length, and formatting options. The class read our text file and grabbed the goal-solution pairs. Then, using the tokenizer, it turned the pairs into tokens. We also made sure the tokens were the right length by adding padding or cutting them if needed. Finally, we stored all this tokenized data in the dataset, ready for training, validation, and testing.
+
+Before training our model, we had to organize our data using the DataCollatorForCompletionOnlyLM class. It made sure the labels were handled properly. Specifically, it ignored any tokens that came before the response key. This way, the model learned to generate responses that completed the instructions correctly.
 
 ## Model(s)
 
