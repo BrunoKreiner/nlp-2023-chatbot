@@ -251,7 +251,7 @@ All in all, the fine-tuned model sets the stop token better than the baseline no
 
 We can also note that GPU memory is a huge bottleneck. The Pythia models available on HuggingFace were trained on large clusters of GPUs with lots of memory. This is discussed in the (Pythia Paper)[https://arxiv.org/pdf/2304.01373.pdf]. During training, the max-length of the input to the model is reached a couple of times due to the input formatting and length of the goal-solution pairs. This might limit training as well.
 
-Furthermore, we also considered using the bert-score as evaluation for our model (https://huggingface.co/spaces/evaluate-metric/bertscore). It provides individual scores for precision, recall, and F1 measure. For given goal-solutions pairs we would calculate the bert score for the reference solution (ground truth) and the model predicted solutio. These scores represent the similarity between the predicted solution and the reference solution, considering the contextual embeddings captured by the pre-trained BERT model.
+Furthermore, we also considered using the bert-score as evaluation for our model (https://huggingface.co/spaces/evaluate-metric/bertscore). It provides individual scores for precision, recall, and F1 measure. For given goal-solutions pairs we would calculate the bert score for the reference solution (ground truth) and the model predicted solution. These scores represent the similarity between the predicted solution and the reference solution, considering the contextual embeddings captured by the pre-trained BERT model.
 
 
 ## Reflection
