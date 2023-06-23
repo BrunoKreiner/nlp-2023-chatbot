@@ -65,6 +65,16 @@ class DataCollatorForCompletionOnlyLM(DataCollatorForLanguageModeling):
         return batch
 
 class GoalSolutionDataset(Dataset):
+    """
+    Dataset for goal-solution pairs
+    
+    Args:
+        tokenizer: tokenizer to use
+        file_path: path to file containing goal-solution pairs
+        max_length: maximum length of the input sequence
+        format: whether to format the data as dolly instruct prompt or not
+        padding: padding strategy to use
+    """
     def __init__(self, tokenizer, file_path, max_length=512, format=True, padding = "max_length"):
         self.tokenizer = tokenizer
         self.max_length = max_length
