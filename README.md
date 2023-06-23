@@ -44,7 +44,11 @@ Since our task was to create a generative Q&A model, we only took the correct an
 ## Training
 
 ### Tokenizer Analysis
-
+In order to understand the preprocessing of the data, we took a better look at the tokenizer. We used the autotokenizer for the pretrained model EleutherAI/pythia-1b. We analyzed the following cases:
+- Out Of Vocabulary words
+- Word contractions
+- Tokenisation of special symbols
+- Tokenisation of instructions
 ### Training Loop
 
 ## Evaluation
